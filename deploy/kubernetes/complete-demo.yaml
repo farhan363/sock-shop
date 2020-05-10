@@ -602,8 +602,8 @@ spec:
   selector:
     name: user-db
 ---
-apiVersion: extensions/v1beta1
-kind: Deployment
+apiVersion: v1
+kind: Services
 metadata:
   name: user
   labels:
