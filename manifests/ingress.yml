@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+    name: "hipster-be1e"
+    labels:
+        app: "hipster-be1e"
+    annotations:
+        kubernetes.io/ingress.class: addon-http-application-routing
+spec:
+    rules:
+        - host: default-hipster-be1e.703fc7a44d0a48aaa185.canadacentral.aksapp.io
+          http:
+            paths:
+            - path: /
+              backend:
+                serviceName: "hipster-be1e"
+                servicePort: 80
