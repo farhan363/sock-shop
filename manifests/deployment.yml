@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "hipster-be1e"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "hipster-be1e"
+  template:
+    metadata:
+      labels:
+        app: "hipster-be1e"
+    spec:
+      containers:
+        - name: "hipster-be1e"
+          image: "sockshop.azurecr.io/hipster"
+          ports:
+          - containerPort: 80
